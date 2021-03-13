@@ -20,7 +20,7 @@ app.use(express.json());
 
 // Features
 app.get('/category', (req, res) => category(req, res, client));
-app.get('/service', (req, res) => service(req, res, client));
+app.get('/:service/service', (req, res) => service(req, res, client));
 app.get('/plan', (req, res) => plan(req, res, client));
 
 app.get('/', (req, res) => {
