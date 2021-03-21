@@ -1,9 +1,9 @@
 const { Service } = require('./../map');
 const query = `
-  SELECT s.service_id, s.name, s.logo from service s 
-  JOIN category c ON c.category_id = s.category_id
-  WHERE c.category_id = $1
-  ORDER BY s.service_id
+  SELECT s.id, s.name, s.logo from service s 
+  JOIN category c ON c.id = s.category_id
+  WHERE c.id = $1
+  ORDER BY s.id
 `;
 
 const service = (req, res, client) => {
