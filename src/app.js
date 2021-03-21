@@ -9,7 +9,8 @@ const api = require('./api');
 
 const category = require('./feature/category');
 const service = require('./feature/service');
-const plan = require('./feature/plan');
+const company = require('./feature/company');
+const product = require('./feature/product');
 
 const app = express();
 
@@ -21,7 +22,8 @@ app.use(express.json());
 // Features
 app.get('/category', (req, res) => category(req, res, client));
 app.get('/:service/service', (req, res) => service(req, res, client));
-app.get('/plan', (req, res) => plan(req, res, client));
+app.get('/:company/company', (req, res) => company(req, res, client));
+app.get('/:product/product', (req, res) => product(req, res, client));
 
 app.get('/', (req, res) => {
   res.json({

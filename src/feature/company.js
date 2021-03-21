@@ -1,13 +1,12 @@
-const { Service } = require('./../map');
 const query = `
-  SELECT s.service_id, s.name, s.logo from service s 
-  JOIN category c ON c.category_id = s.category_id
-  WHERE c.category_id = $1
-  ORDER BY s.service_id
+  SELECT p.id, p.name, p.price, p.duration_type from plan p
+  JOIN service s ON s.id = p.service_id
+  WHERE s.id = $1
+  ORDER BY p.id
 `;
 
 const service = (req, res, client) => {
-  client.query(query, [Service[req.params.service]], (err, result) => {
+  client.query(query, [req.params.company], (err, result) => {
     if (err && !result) {
       res.status(res.statusCode).send({
         status: res.statusCode,
