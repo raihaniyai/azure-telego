@@ -9,6 +9,13 @@ const Service = {
   others: 8,
 };
 
+const PlanType = {
+  Daily: 1,
+  Monthly: 2,
+  Annual: 3,
+};
+
 module.exports = {
-  Service
+  Service,
+  PlanType
 };

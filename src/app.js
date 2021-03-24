@@ -11,6 +11,7 @@ const category = require('./feature/category');
 const service = require('./feature/service');
 const company = require('./feature/company');
 const product = require('./feature/product');
+const { postOrder, getOrder } = require('./feature/order');
 
 const app = express();
 
@@ -24,6 +25,9 @@ app.get('/category', (req, res) => category(req, res, client));
 app.get('/:service/service', (req, res) => service(req, res, client));
 app.get('/:company/company', (req, res) => company(req, res, client));
 app.get('/:product/product', (req, res) => product(req, res, client));
+
+app.get('/order', (req, res) => getOrder(req, res, client));
+app.post('/order', (req, res) => postOrder(req, res, client));
 
 app.get('/', (req, res) => {
   res.json({

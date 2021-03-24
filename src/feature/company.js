@@ -5,7 +5,7 @@ const query = `
   ORDER BY p.id
 `;
 
-const service = (req, res, client) => {
+const company = (req, res, client) => {
   client.query(query, [req.params.company], (err, result) => {
     if (err && !result) {
       res.status(res.statusCode).send({
@@ -16,7 +16,7 @@ const service = (req, res, client) => {
       return
     }
 
-    const response = { service: result.rows };
+    const response = { company: result.rows };
 
     res.status(res.statusCode).send({
       status: res.statusCode,
@@ -26,4 +26,4 @@ const service = (req, res, client) => {
   });
 };
 
-module.exports = service;
+module.exports = company;
