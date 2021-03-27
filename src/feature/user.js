@@ -8,7 +8,7 @@ const getQuery = `
 `;
 
 const updateBalance = (req, res, client) => {
-  const userID = req.body.userID;
+  const userID = req.params.userID;
   const balance = req.body.balance;
 
   if (!userID) {
@@ -57,7 +57,7 @@ const updateBalance = (req, res, client) => {
 };
 
 const getUserDetails = (req, res, client) => {
-  const userID = req.body.userID;
+  const userID = req.params.userID;
 
   if (!userID) {
     res.status(res.statusCode).send({

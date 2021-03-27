@@ -29,8 +29,8 @@ app.get('/:product/product', (req, res) => product(req, res, client));
 
 app.get('/order', (req, res) => getOrder(req, res, client));
 app.post('/order', (req, res) => postOrder(req, res, client));
-app.get('/user', (req, res) => getUserDetails(req, res, client));
-app.post('/user', (req, res) => updateBalance(req, res, client));
+app.get('/:userID/user', (req, res) => getUserDetails(req, res, client));
+app.post('/:userID/user', (req, res) => updateBalance(req, res, client));
 
 app.get('/', (req, res) => {
   res.json({
