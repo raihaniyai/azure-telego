@@ -11,7 +11,7 @@ const plan = (req, res, client) => {
     }
 
     const plan = {
-      id: result.rows[0].d,
+      id: result.rows[0].id,
       name: result.rows[0].name,
       price: result.rows[0].price,
       durationType: result.rows[0].duration_type,
