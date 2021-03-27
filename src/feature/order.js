@@ -14,7 +14,7 @@ const getQuery = `
   WHERE o.user_id = $1;
 `;
 
-const sendError = errorMessage => {
+const sendError = (req, res, errorMessage) => {
   res.status(res.statusCode).send({
     status: res.statusCode,
     success: false,
@@ -38,28 +38,28 @@ const postOrder = (req, res, client) => {
         }
       })
 
-      sendError('Error in transaction')
+      sendError(req, res, 'Error in transaction')
     }
     return !!err
   }
 
   if (!userID) {
-    sendError("Please input User ID")
+    sendError(req, res, "Please input User ID")
     return
   }
 
   if (!planID) {
-    sendError("Please input Plan ID")
+    sendError(req, res, "Please input Plan ID")
     return
   }
 
   if (!planType) {
-    sendError("Please input Plan Type")
+    sendError(req, res, "Please input Plan Type")
     return
   }
 
   if (!price) {
-    sendError("Please input the Price")
+    sendError(req, res, "Please input the Price")
     return
   }
 
@@ -126,7 +126,7 @@ const getOrder = (req, res, client) => {
   const userID = req.body.userID;
 
   if (!userID) {
-    sendError("Please input User ID")
+    sendError(req, res, "Please input User ID")
     return
   }
 
@@ -140,7 +140,7 @@ const getOrder = (req, res, client) => {
       return
     }
 
-    const response = { company: result.rows };
+    const response = { order: result.rows };
 
     res.status(res.statusCode).send({
       status: res.statusCode,
