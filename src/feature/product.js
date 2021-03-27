@@ -10,7 +10,18 @@ const plan = (req, res, client) => {
       res.status(400).send(err);
     }
 
-    const response = { plan: result.rows };
+    const plan = {
+      name: result.rows[0].name,
+      price: result.rows[0].price,
+      durationType: result.rows[0].duration_type,
+      description: [],
+    };
+
+    for (const id in result.rows) {
+      plan.description.push(result.rows[id].description);
+    }
+
+    const response = { plan: plan };
 
     res.status(res.statusCode).send({
       status: res.statusCode,
