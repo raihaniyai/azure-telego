@@ -1,5 +1,5 @@
 const query = `
-  SELECT p.name, p.price, p.duration_type, pd.description FROM plan p 
+  SELECT p.id, p.name, p.price, p.duration_type, pd.description FROM plan p 
   JOIN plan_desc pd ON pd.plan_id = p.id 
   WHERE pd.plan_id = $1
 `;
@@ -11,6 +11,7 @@ const plan = (req, res, client) => {
     }
 
     const plan = {
+      id: result.rows[0].d,
       name: result.rows[0].name,
       price: result.rows[0].price,
       durationType: result.rows[0].duration_type,
