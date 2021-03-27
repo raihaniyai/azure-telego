@@ -1,4 +1,8 @@
-const query = 'SELECT pd.description FROM plan_desc pd where pd.plan_id = $1';
+const query = `
+  SELECT p.name, p.price, p.duration_type, pd.description FROM plan p 
+  JOIN plan_desc pd ON pd.plan_id = p.id 
+  WHERE pd.plan_id = $1
+`;
 
 const plan = (req, res, client) => {
   client.query(query, [req.params.product], (err, result) => {
