@@ -4,9 +4,9 @@ const Service = {
   gaming: 3,
   automotive: 4,
   device: 5,
-  drone: 6,
+  drones: 6,
   smart_home: 7,
-  others: 8,
+  more: 8,
 };
 
 const PlanType = {

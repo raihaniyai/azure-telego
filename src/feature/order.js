@@ -24,7 +24,7 @@ const sendError = (req, res, errorMessage) => {
 }
 
 const postOrder = (req, res, client) => {
-  const userID = req.body.userID;
+  const userID = req.params.userID;
   const planID = req.body.planID;
   const planType = req.body.planType;
   const price = req.body.price;
@@ -123,7 +123,7 @@ const postOrder = (req, res, client) => {
 };
 
 const getOrder = (req, res, client) => {
-  const userID = req.body.userID;
+  const userID = req.params.userID;
 
   if (!userID) {
     sendError(req, res, "Please input User ID")
