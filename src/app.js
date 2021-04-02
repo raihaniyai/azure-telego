@@ -13,6 +13,7 @@ const company = require('./feature/company');
 const product = require('./feature/product');
 const { postOrder, getOrder } = require('./feature/order');
 const { updateBalance, getUserDetails } = require('./feature/user');
+const { gacha } = require('./feature/gacha');
 
 const app = express();
 
@@ -31,6 +32,8 @@ app.get('/:userID/order', (req, res) => getOrder(req, res, client));
 app.post('/:userID/order', (req, res) => postOrder(req, res, client));
 app.get('/:userID/user', (req, res) => getUserDetails(req, res, client));
 app.post('/:userID/user', (req, res) => updateBalance(req, res, client));
+
+app.post('/:userID/gacha', (req, res) => gacha(req, res, client));
 
 app.get('/', (req, res) => {
   res.json({

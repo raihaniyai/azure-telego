@@ -31,8 +31,6 @@ const updateBalance = (req, res, client) => {
     return
   }
 
-  console.log(balance)
-
   // update balance
   client.query(postQuery, [balance, userID], (err, transactionResult) => {
     const updatedBalance = transactionResult ? transactionResult.rows[0].balance : -1;
