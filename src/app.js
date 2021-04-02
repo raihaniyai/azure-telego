@@ -15,6 +15,7 @@ const { postOrder, getOrder } = require('./feature/order');
 const { updateBalance, getUserDetails } = require('./feature/user');
 const { gacha } = require('./feature/gacha');
 const { getMyCoupon, getCouponPlan } = require('./feature/coupon');
+const { getNews } = require('./feature/news');
 
 const app = express();
 
@@ -36,6 +37,8 @@ app.post('/:userID/user', (req, res) => updateBalance(req, res, client));
 app.get('/:userID/my_coupon', (req, res) => getMyCoupon(req, res, client));
 app.get('/:userID/:planID/coupon_plan', (req, res) => getCouponPlan(req, res, client));
 app.post('/:userID/gacha', (req, res) => gacha(req, res, client));
+
+app.get('/:searchQueryParams/news', (req, res) => getNews(req, res, client));
 
 app.get('/', (req, res) => {
   res.json({
