@@ -9,7 +9,7 @@ const getNews = (req, res) => {
     path: `/v7.0/news/search?q=5g+${searchQueryParams}&count=30`,
     method: 'GET',
     headers: {
-      'Ocp-Apim-Subscription-Key': 'dafbed6cba354bbfaccbbdf784025a70',
+      'Ocp-Apim-Subscription-Key': process.env.APIKEY,
     }
   }
 
