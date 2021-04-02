@@ -3,7 +3,7 @@ const postQuery = `
   RETURNING balance
 `;
 const getQuery = `
-  SELECT u.first_name, u.last_name, u.balance FROM "user" u 
+  SELECT u.first_name, u.last_name, u.balance, u.gacha FROM "user" u 
   WHERE u.id = $1
 `;
 
