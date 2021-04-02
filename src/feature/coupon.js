@@ -7,7 +7,7 @@ const getQuery = `
 `;
 
 const getCouponPlanQuery = `
-  SELECT d.name deal_name, d.img, d.start_date, d.end_date, d.promo_code FROM user_deal ud
+  SELECT d.name deal_name, d.img, d.start_date, d.end_date, d.promo_code, d.discount_price FROM user_deal ud
   JOIN deal d ON ud.deal_id = d.deal_id
   WHERE ud.user_id = $1
   AND d.plan_id = $2;
