@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container, HeaderTitle } from './style';
-import { Tabs } from 'antd';
+import { Spin, Tabs } from 'antd';
+import { LoadingOutlined } from '@ant-design/icons';
 import SubscriptionCard from '../../SubscriptionCard';
 import { useFetchOrderData } from '../../../helpers/apiGet';
 
@@ -12,6 +13,8 @@ const mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
 const yyyy = today.getFullYear();
 
 const date = yyyy + '-' + mm + '-' + dd;
+
+const loadIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
 const Ongoing = () => {
   const { loading, response: orderList } = useFetchOrderData(1);
@@ -29,6 +32,12 @@ const Ongoing = () => {
     <>
       <div className={Container}>
         <div className={HeaderTitle}>My Subscriptions</div>
+        {
+          loading && 
+            <div style={{display: 'flex', justifyContent: 'center', marginTop: '50px'}}>
+              <Spin indicator={loadIcon} size="large"/>
+            </div>
+        }
         <Tabs defaultActiveKey="1" centered size="large">
 
         {!loading && ongoing.length > 0 && (

@@ -2,6 +2,10 @@ import React from 'react';
 import { Container, HeaderTitle } from './style';
 import { useFetchCouponData } from '../../../helpers/apiGet';
 import CouponCard from '../../CouponCard';
+import { Spin } from 'antd';
+import { LoadingOutlined } from '@ant-design/icons';
+
+const loadIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
 const Coupons = () => {
 
@@ -23,6 +27,12 @@ const Coupons = () => {
                 <CouponCard name={coupon.deal_name} company={coupon.service_name} expiry={coupon.end_date.slice(0, 10)} thumbnail={coupon.img} onCopyCode={handleCopyCode}/>
               // </Link>
             ))
+          }
+          {
+            loading && 
+              <div style={{display: 'flex', justifyContent: 'center', marginTop: '50px'}}>
+                <Spin indicator={loadIcon} size="large"/>
+              </div>
           }
       </div>
     </>
