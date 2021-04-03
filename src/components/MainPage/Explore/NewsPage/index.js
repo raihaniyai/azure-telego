@@ -8,7 +8,6 @@ import { Card, CardContent } from '../NewsCard/style';
 const NewsPage = ({ query }) => {
 
   const { loading, response: newsInfo } = useFetchNews(query);
-  console.log('newsInfo', newsInfo);
 
   const skeleton = new Array(3).fill({});
 

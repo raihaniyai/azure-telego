@@ -8,7 +8,6 @@ import { TrendingWrapper } from './style';
 
 const HotPage = () => {
     const { loading, response: newsInfo } = useFetchNews();
-    console.log('newsInfo', newsInfo);
     
     const skeleton = new Array(5).fill({});
     return (

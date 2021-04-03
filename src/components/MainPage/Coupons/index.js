@@ -11,10 +11,8 @@ const Coupons = () => {
 
   const { loading, response: couponList } = useFetchCouponData(1);
 
-  const handleCopyCode = e => {
+  const handleCopyCode = (e) => {
     e.stopPropagation();
-    console.log("Copy promo")
-    // copy promo code
   }
 
   return (
@@ -24,7 +22,7 @@ const Coupons = () => {
           {
             !loading && couponList.map(coupon => (
               // <Link to={`/coupon/${couponId}`} key={couponId}>
-                <CouponCard name={coupon.deal_name} company={coupon.service_name} expiry={coupon.end_date.slice(0, 10)} thumbnail={coupon.img} onCopyCode={handleCopyCode}/>
+                <CouponCard name={coupon.deal_name} company={coupon.service_name} expiry={coupon.end_date.slice(0, 10)} thumbnail={coupon.img} onCopyCode={(handleCopyCode)}/>
               // </Link>
             ))
           }

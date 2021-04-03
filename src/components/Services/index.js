@@ -22,7 +22,6 @@ import {
 const Services = () => {
   const { servicesName } = useParams();
   const { loading, response: serviceList } = useFetchServiceData(servicesName);
-  console.log('serviceList',serviceList);
   const skeleton = new Array(6).fill({});
 
   return (

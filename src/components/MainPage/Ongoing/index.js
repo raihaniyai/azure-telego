@@ -28,9 +28,6 @@ const Ongoing = () => {
     }
   }, [loading, orderList]);
 
-  console.log(ongoing)
-  console.log(history)
-
   return (
     <>
       <div className={Container}>
