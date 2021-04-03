@@ -48,7 +48,7 @@ const Deal = () => {
           {
             !loading && getDeals(0, couponList.length).map(coupon => (
               // <Link to={`/coupon/${couponId}`} key={couponId}>
-                <CouponCard style={{boxShadow: '0px 3px 15px rgba(0, 0, 0, 0.1)'}} name={coupon.deal_name} company={coupon.service_name} thumbnail={coupon.img}/>
+                <CouponCard key={coupon.deal_name} style={{boxShadow: '0px 3px 15px rgba(0, 0, 0, 0.1)'}} name={coupon.deal_name} company={coupon.service_name} thumbnail={coupon.img}/>
               // </Link>
             ))
           }
