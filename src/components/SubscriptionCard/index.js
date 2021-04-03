@@ -8,7 +8,7 @@ const SubscriptionCard = ({ id, title, price, durationType }) => {
     else if (durationType === 2) duration = 'Month';
     else if (durationType === 3) duration = 'Year';
 
-    const subtitle = `$${price}/${duration}`;
+    const subtitle = durationType === 0 ? `$ ${price}` : `$${price}/${duration}`;
 
     return (
         <div>
