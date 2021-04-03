@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useFetchNews } from '../../../../helpers/apiGet';
 import NewsCard from '../NewsCard';
 import { Skeleton } from 'antd';
@@ -9,14 +9,20 @@ const NewsPage = ({ query }) => {
 
   const { loading, response: newsInfo } = useFetchNews(query);
   console.log('newsInfo', newsInfo);
+  const [newsContent, setNewsContent] = useState([]);
 
   const skeleton = new Array(3).fill({});
 
+  useEffect(() => {
+    if (!loading) {
+        setNewsContent(newsInfo);
+    }
+  }, [loading, newsContent]);
 
   return (
     <div style={{paddingBottom: '120px'}}>
       {
-        !loading && newsInfo.map(news => 
+        !loading && newsContent.map(news => 
           (
             <NewsCard key={news.name} title={news.name} url={news.url} desc={news.description} date={news.datePublished.slice(0,10)}/>
           )
