@@ -28,6 +28,9 @@ const Ongoing = () => {
     }
   }, [loading, orderList]);
 
+  console.log(ongoing)
+  console.log(history)
+
   return (
     <>
       <div className={Container}>
@@ -43,9 +46,9 @@ const Ongoing = () => {
         {!loading && ongoing.length > 0 && (
           <TabPane tab="Ongoing" key="1">
             {ongoing.map(product => (
-                <div key={product.name}>
+                <div key={product.id}>
                     {/* <Link to={{pathname: `/product/${product.id}`, company: company, services: services}}> */}
-                        <SubscriptionCard id={product.name.charCodeAt(0)} title={product.name} price={product.price} durationType="1" />                                        
+                        <SubscriptionCard id={product.name.charCodeAt(0)} title={product.name} price={product.price} durationType={product.duration_type} />                                        
                     {/* </Link> */}
                 </div>
             ))}
@@ -54,10 +57,10 @@ const Ongoing = () => {
         {!loading && history.length > 0 && (
           <TabPane tab="History" key="2">
             {history.map(product => (
-                <div key={product.name}>
+                <div key={product.id}>
                     <div key={product.name}>
                         {/* <Link to={{pathname: `/product/${product.id}`, company: company, services: services}}> */}
-                            <SubscriptionCard id={product.name.charCodeAt(0)} title={product.name} price={product.price} durationType="1" />                                        
+                            <SubscriptionCard id={product.name.charCodeAt(0)} title={product.name} price={product.price} durationType={product.duration_type} />                                        
                         {/* </Link> */}
                     </div>
                 </div>
