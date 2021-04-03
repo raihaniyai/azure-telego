@@ -7,7 +7,7 @@ import { SkeletonStyle, ListStyle } from './style';
 import { TrendingWrapper } from './style';
 
 const HotPage = () => {
-    const { loading, response: newsInfo } = useFetchNews('');
+    const { loading, response: newsInfo } = useFetchNews();
     const skeleton = new Array(5).fill({});
     return (
         <div>

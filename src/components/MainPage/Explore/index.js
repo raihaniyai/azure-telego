@@ -49,8 +49,8 @@ const Explore = () => {
       <Tabs categoryList={CategoryList}/>
       <Input className={InputStyle} placeholder="Search" prefix={<SearchOutlined />}
         onKeyPress={(event) => {
-          if (event.key === 'Enter') {
-            setNews(<NewsPageAny query={event.target.value}/>);
+          if (event.key === 'Enter' && (event.target.value.trim().length)) {
+            setNews(<NewsPageAny query={event.target.value.replace(/[ ,]+/g, "-")}/>);
             setActiveTab();
           }
         }} bordered />

@@ -5,7 +5,7 @@ export const Container = css`
   width: -webkit-fill-available;
   background: ${N0};
   border-radius: 20px;
-  margin: 12px 0 30px 0;
+  margin: 12px 0 120px 0;
   display: inline-block;
   padding: 16px;
   padding-bottom: 40px;
@@ -22,7 +22,6 @@ export const Title = css`
   font-weight: 700;
   font-size: 17px;
   color: #1E1E3F;
-  margin-bottom: 16px;
 `;
 
 export const Thumbnail = css`

@@ -28,16 +28,9 @@ const useCustomFetcher = ({ resourceURL = {}, header = {} }) => {
   return { loading: result.loading, returnData: result.returnData, refetch };
 };
 
-export const useFetchNews = query => {
-  const resourceURL = new URL(`https://api.bing.microsoft.com/v7.0/news/search?q=5g+${query}&count=30`);
-  // const resourceURL = new URL(NewsEndpoint(query));
-
-  const header = {
-    'Content-Type': 'application/json',
-    'Ocp-Apim-Subscription-Key': ''
-  }
-  const { returnData = {}, loading } = useCustomFetcher({ resourceURL, header });
-  // const { returnData = {}, loading } = useCustomFetcher({ resourceURL });
+export const useFetchNews = searchQuery => {
+  const resourceURL = new URL(NewsEndpoint(searchQuery));
+  const { returnData = {}, loading } = useCustomFetcher({ resourceURL });
 
   if (!loading) { const success = returnData.success || [];
     if (!success) {
@@ -51,12 +44,11 @@ export const useFetchNews = query => {
       };
     }
 
-    const { value } = returnData || {};
-    // const { data } = returnData || {};
-    // const { value } = data || {};
+    const { data } = returnData || {};
+    // const { service } = data || {};
 
     return {
-      response: value,
+      response: data,
       loading,
     };
   }
@@ -65,6 +57,7 @@ export const useFetchNews = query => {
     loading,
   };
 };
+
 
 export const useFetchServiceData = service => {
   const resourceURL = new URL(ServiceEndpoint(service));

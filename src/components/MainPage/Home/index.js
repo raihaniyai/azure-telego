@@ -6,7 +6,6 @@ import BodySection from './BodySection';
 import { useFetchUserData } from '../../../helpers/apiGet';
 import { Background, BackgroundContainer, Container, HeaderBox } from './style';
 import GachaButton from './GachaButton';
-import SubscriptionCard from '../../SubscriptionCard';
 import { usePostGacha } from '../../../helpers/apiPost';
 import CouponCard from '../../CouponCard';
 
@@ -52,7 +51,6 @@ const Home = () => {
           style={{padding: "15px"}}
         >
           <div style={{textAlign: 'center'}}>Congratulations! You received: </div>
-          {/* <SubscriptionCard id={gachaData.deal_id} title={gachaData.name} price="$0" durationType="1"/> */}
           {
             !loadingGacha && (<CouponCard name={gachaDetails.name} thumbnail={gachaDetails.img}/>)
           } 
