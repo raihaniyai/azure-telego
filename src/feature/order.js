@@ -9,7 +9,7 @@ const transactionQuery = `
   RETURNING balance
 `;
 const getQuery = `
-  SELECT p.name, p.price, o.end_date FROM "order" o
+  SELECT p.id, p.name, p.price, o.end_date, p.duration_type FROM "order" o
   JOIN plan p ON p.id = o.plan_id 
   WHERE o.user_id = $1;
 `;
