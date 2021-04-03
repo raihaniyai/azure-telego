@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { CouponCardStyle, CouponDesc, Company, Expiration, Thumbnail } from './style';
+import GlobalContext from './../../contexts/GlobalContext';
 import { Button } from 'antd';
 
 const CouponCard = ({ name, company, expiry, thumbnail, onCopyCode }) => {
-   
+    const { setActiveMenu } = useContext(GlobalContext);
     return (
-        <div className={CouponCardStyle}>
+        <div className={CouponCardStyle} onClick={() => setActiveMenu(2)}>
             <div>
             <img className={Thumbnail} src={thumbnail} alt=""/>
             </div>
