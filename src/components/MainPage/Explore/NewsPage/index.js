@@ -9,15 +9,8 @@ const NewsPage = ({ query }) => {
 
   const { loading, response: newsInfo } = useFetchNews(query);
   console.log('newsInfo', newsInfo);
-  // const [newsContent, setNewsContent] = useState([]);
 
   const skeleton = new Array(3).fill({});
-
-  // useEffect(() => {
-  //   if (!loading) {
-  //       setNewsContent(newsInfo);
-  //   }
-  // }, [loading, newsContent]);
 
   return (
     <div style={{paddingBottom: '120px'}}>

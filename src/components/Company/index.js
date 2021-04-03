@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { Row, Col, Tabs, Skeleton } from 'antd';
+import { Row, Col, Tabs, Skeleton, Spin } from 'antd';
 import { ArrowLeftOutlined } from '@ant-design/icons';
 import { useParams, Link, useHistory } from 'react-router-dom';
 import capitalize from '../../helpers/capitalize';
 import { useFetchCompanyData } from '../../helpers/apiGet';
 import { Container, HeaderTitle, ProfileContainer, CompanyLogo, CompanyName, CompanyType, ItemContainer } from './style';
 import SubscriptionCard from '../SubscriptionCard';
- 
+import { LoadingOutlined } from '@ant-design/icons';
+
+const loadIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
 const { TabPane } = Tabs;
 const skeleton = new Array(3).fill({});
@@ -43,6 +45,12 @@ const Company = () => {
                     </div>
 
                     <div className={ItemContainer}>
+                        {
+                            loading && 
+                                <div style={{display: 'flex', justifyContent: 'center', marginTop: '50px'}}>
+                                <Spin indicator={loadIcon} size="large"/>
+                                </div>
+                        }
                         <Tabs defaultActiveKey={subscriptions.length > 0 ? "1" : "2"} centered size="large">
 
                             {subscriptions.length > 0 && (
@@ -56,10 +64,6 @@ const Company = () => {
                                             </div>
                                         </div>
                                     ))}
-
-                                    {loading && skeleton.map((_, index) => (
-                                        <Skeleton active key={index} />
-                                    ))}
                                 </TabPane>
                             )}
                             {products.length > 0 && (
@@ -72,10 +76,6 @@ const Company = () => {
                                                 </Link>
                                             </div>
                                         </div>
-                                    ))}
-
-                                    {loading && skeleton.map((_, index) => (
-                                        <Skeleton active key={index} />
                                     ))}
                                 </TabPane>
                             )}
