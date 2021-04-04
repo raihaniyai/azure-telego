@@ -130,7 +130,7 @@ const PaymentModal = ({ visible, setVisible, plan, duration }) => {
         <div className={TotalPayment}>
           <div>Total payment</div>
           <div style={{ color: "#404EFB", fontSize: "20px" }}>
-            <strong>$ {totalPrice - (totalPrice - discountPrice)}</strong>
+            <strong>$ {totalPrice - (totalPrice * discountPrice)}</strong>
           </div>
         </div>
       </div>
