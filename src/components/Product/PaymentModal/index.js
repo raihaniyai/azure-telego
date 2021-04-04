@@ -20,7 +20,7 @@ const PaymentModal = ({ visible, setVisible, plan, duration }) => {
       userID: 1,
       planID: plan.id,
       planType: plan.durationType,
-      price: totalPrice - discountPrice,
+      price: totalPrice - (totalPrice * discountPrice),
     };
 
     postOrder(params);
@@ -65,7 +65,7 @@ const PaymentModal = ({ visible, setVisible, plan, duration }) => {
       visible={visible}
       onCancel={() => setVisible(false)}
       onOk={() => handlePayment()}
-      okText={`Purchase ($ ${totalPrice - discountPrice})`}
+      okText={`Purchase ($ ${totalPrice - (totalPrice * discountPrice)})`}
       style={{ padding: "15px" }}
     >
       <SubscriptionCard id={plan.id} title={plan.name} price={plan.price} durationType={plan.durationType} />
@@ -130,7 +130,7 @@ const PaymentModal = ({ visible, setVisible, plan, duration }) => {
         <div className={TotalPayment}>
           <div>Total payment</div>
           <div style={{ color: "#404EFB", fontSize: "20px" }}>
-            <strong>$ {totalPrice - discountPrice}</strong>
+            <strong>$ {totalPrice - (totalPrice - discountPrice)}</strong>
           </div>
         </div>
       </div>
