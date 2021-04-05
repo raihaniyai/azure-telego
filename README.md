@@ -5,12 +5,11 @@ Access Telego here: https://telego.azurewebsites.net/
 
 ## Inspiration
 One of our team members, who has been following the telecommunications industry, has long noticed how the cannibalisation of Telcos by OTT services still persists in the past few years. After working at a gaming company, he was introduced to the idea of payment channels, which then sparked a thought: 
-
-Taking into account the feasibility of integration and the huge amount of data owned, Telcos may be the _perfect entity_ to serve as the largest payment gateway for OTT, or any other applicable service providers.
+Due to the feasibility of integration and the huge amount of data owned, Telcos may be the _perfect entity_ to serve as the largest payment gateway for OTT, or any other service providers.
 
 Additionally, looking at the low non-telco payment channel adoption in developing countries including Indonesia, we see that Telcos can position themselves as the bridge between people living in rural areas and digital services offered by service providers. 
 
-Now, as we face the upcoming wave of 5G, we should expect to encounter a variety of new services and use cases of connectivity other than OTT. With the ultimate payment gateway proposition, we believe Telcos can easily **tap into the new 5G market** and **gain new revenue streams** by establihing a centralised platform that sells an extensive range of connectivity-related services or smart devices which will fulfil this 5G demand. 
+Now, as we face the upcoming wave of 5G, we should expect to encounter a variety of new services and use cases of connectivity other than OTT. With the ultimate payment gateway proposition, Telcos can also easily **tap into the new 5G market** and **gain new revenue stream** by establihing a centralised platform that sells an extensive range of connectivity-related services or smart devices according to the 5G demand. 
 
 This way, revenue stream will be correlated with products and services sales. Hence, profitability will be ensured and expected to be more sustainable (considering the current demand and forecasted growing demand).
 
