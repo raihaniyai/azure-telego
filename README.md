@@ -56,6 +56,6 @@ Below is a rough breakdown of Telego's development process:
 4. Implement the app's components according to the design defined in the Figma project
 5. Create Azure Database for PostgreSQL Server in Azure Portal
 6. Connect server-side to PostgreSQL database
-7. Set up Azure Cognitive Services in Azure Portal in order to use Personalizer and Bing News API
+7. Set up Azure Cognitive Services in Azure Portal in order to use Personalizer and Bing News Search API
 8. Connect server-side to Personalizer and Bing News Search API
 9. Connect client-side to server-side through the developed APIs
