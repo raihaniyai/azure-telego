@@ -31,7 +31,7 @@ This is how we came up with [Telego](https://telego.azurewebsites.net/) as our s
 <img width="45%" src="https://github.com/clchinara/media-repo/blob/master/telego/streaming.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img width="45%" src="https://github.com/clchinara/media-repo/blob/master/telego/sample-plan.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <br>
 
-<img width="45%" src="https://github.com/clchinara/netxis/blob/main/explore.png">
+<img width="45%" src="https://github.com/clchinara/media-repo/blob/master/telego/explore.png">
 <br>
 
 ## Tech stack
