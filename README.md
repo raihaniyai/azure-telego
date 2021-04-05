@@ -33,6 +33,7 @@ This is how we came up with [Telego](https://telego.azurewebsites.net/) as our s
 <br>
 
 <img width="45%" src="https://github.com/clchinara/netxis/blob/main/explore.png">
+<br>
 
 ## Tech stack
 * Client-side framework: **ReactJS**
