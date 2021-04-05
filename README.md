@@ -49,7 +49,7 @@ See previous designs [here](https://www.figma.com/file/nyUci7p9Vk6ygFzgxDmyol/no
 <img src="https://github.com/clchinara/media-repo/blob/master/telego/app-architecture.png">
 
 ## How we built Telego
-Below is a rough breakdown on Telego's development process: 
+Below is a rough breakdown of Telego's development process: 
 1. Design the app's UI/UX on [Figma](https://www.figma.com/file/nyUci7p9Vk6ygFzgxDmyol/not-samsan-tech?node-id=0%3A1)
 2. Set up Azure App Service on Azure Portal to host client-side and server-side
 3. Build pipelines on Azure DevOps to automate the deployment process every time a commit is pushed
