@@ -1,38 +1,61 @@
-# azure-telego
-Telego app could be access here: https://telego.azurewebsites.net/
+# Telego
+Telego is a Telco app that utilises a new revenue model as direct payment and promotion gateway for OTT platforms and other (5G) service providers by integrating their products into one, Telco-owned platform.
 
-## Inspiration:
-One of our team members has been following Telco industry and did various studies on the industry as the OTT cannibalising Telco issues has been going on for the few years. After working at a gaming company, he realised that payment channel is a thing and Telco can be the perfect entity to be the biggest payment gateway for OTTs due to the integration feasibility and huge amount of data owned.
+Access Telego here: https://telego.azurewebsites.net/
 
-Additionally, looking at the low non-telco payment channel adoption in developing countries, including Indonesia, we see that Telco can position themselves as the bridge for those individuals living in rural area and digital services offered by OTT
+## Inspiration
+One of our team members, who has been following the telecommunications industry, has long noticed how the cannibalisation of Telcos by OTT services still persists in the past few years. After working at a gaming company, he was introduced to the idea of payment channels, which then sparked a thought: 
 
-Facing the upcoming wave of 5G, we can see how more and more individuals will own smart devices that utilise such network. Hence, with the ultimate payment gateway proposition, Telco can easily tap to that new market too by offering direct purchase of those devices through the Telco app
+Taking into account the feasibility of integration and the huge amount of data owned, Telcos may be the _perfect entity_ to serve as the largest payment gateway for OTT, or any other applicable service providers.
 
-This way, revenue stream will be correlated with product and services sales. Hence, profitability will be ensured and expected to be more sustainable (considering the current demand and forecasted growing demand)
+Additionally, looking at the low non-telco payment channel adoption in developing countries including Indonesia, we see that Telcos can position themselves as the bridge between people living in rural areas and digital services offered by service providers. 
 
-This is how we came up with Telego as our idea to solve the problem statement faced by Telco
+Now, as we face the upcoming wave of 5G, it is a given that we are going to encounter a great number of new services or use cases of connectivity other than OTT. We strongly believe that with the ultimate payment gateway proposition, not only will Telcos escape from its vicious circle of unprofitability, they will also be able to easily **tap into the new 5G market** and **gain new revenue streams** by offering a direct payment method, as well as a centralised platform that sells an extensive range of connectivity-related services. 
 
-## What it does:
-1.	Allow users to purchase various digital services and tech-related hardware through the telco app with their telco credit
-2.	Offer targeted personalised deals for user (allow services provider to push the deals manually too to their preferred target audience)
-3.	Free tech news update for the users
+This way, revenue stream will be correlated with products and services sales. Hence, profitability will be ensured and expected to be more sustainable (considering the current demand and forecasted growing demand).
 
-## How we built it
-These are our journey to build the Telego app:
-1. We designed the UI/UX component in [Our Project on Figma](https://www.figma.com/file/nyUci7p9Vk6ygFzgxDmyol/not-samsan-tech?node-id=0%3A1)
-2. Create web app services on Azure Portal for the client-side and the server-side
-3. Build pipeline on the Azure Devops to automate the deployment process once we push a commit
-4. Implement the component design which already defined in our project on Figma
-5. Create prostgesql in Azure Portal as our storage
-6. Connect the server-side to the database (postgresql)
-7. Create Cognitive Services in Azure Portal in order to use Bing News API
-8. Connect the server-side to the Bing News Search API
-9. Connect the client-side to the server-side through the developed API
+This is how we came up with [Telego](https://telego.azurewebsites.net/) as our solution to the problem faced by the telecommunications industry.
 
-## Tech stack used
-1. React JS as the framework for client-side
-2. Express JS as the framework for server-side
-3. Postgresql as our Database
-4. Azure Web App Services to host our client-side and server-side
-5. Bing News Search API
-6. Azure Devops to build pipeline and automate the deployment process
+## Main features
+* **All-in-one** - Telego allows users to browse various digital services and their related hardwares via only one, compact platform
+* **Easy transaction** - Telego allows users to make payment directly through the app with Telego credits
+* **Win-win solution** - Telego offers targeted, personalised deals to users while also allowing service providers to push promotions manually to their preferred target customers
+* **Stay informed** - Telego hosts a tech-focused news client for users to stay up-to-date with the latest innovations in the 5G era
+
+## UI design
+
+<br>
+
+<img width="45%" src="https://github.com/clchinara/media-repo/blob/master/telego/home.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img width="45%" src="https://github.com/clchinara/media-repo/blob/master/telego/sample-company.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+
+<img width="45%" src="https://github.com/clchinara/media-repo/blob/master/telego/streaming.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img width="45%" src="https://github.com/clchinara/media-repo/blob/master/telego/sample-plan.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+
+<img width="45%" src="https://github.com/clchinara/netxis/blob/main/explore.png">
+
+## Tech stack
+* Client-side framework: **ReactJS**
+* Server-side framework: **ExpressJS**
+* Database: **PostgreSQL**
+* Recommendation system: **Azure Cognitive Services - Personalizer**
+* CI/CD: **Azure DevOps**
+* Hosting: **Azure App Service**
+* Miscellaneous: **Bing News Search**
+
+<img src="https://github.com/clchinara/media-repo/blob/master/telego/app-architecture.png">
+
+## General system architecture
+<img src="https://github.com/clchinara/media-repo/blob/master/telego/sys-architecture.png">
+
+## How we built Telego
+Below is a rough breakdown of Telego's development process: 
+1. Design the app's UI/UX on [Figma](https://www.figma.com/file/nyUci7p9Vk6ygFzgxDmyol/not-samsan-tech?node-id=0%3A1)
+2. Set up Azure App Service on Azure Portal to host client-side and server-side
+3. Build pipelines on Azure DevOps to automate the deployment process every time a commit is pushed
+4. Implement the app's components according to the design defined in the Figma project
+5. Create Azure Database for PostgreSQL Server in Azure Portal
+6. Connect server-side to PostgreSQL database
+7. Set up Azure Cognitive Services in Azure Portal in order to use Personalizer and Bing News API
+8. Connect server-side to Personalizer and Bing News Search API
+9. Connect client-side to server-side through the developed APIs
