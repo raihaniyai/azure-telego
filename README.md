@@ -10,7 +10,7 @@ Taking into account the feasibility of integration and the huge amount of data o
 
 Additionally, looking at the low non-telco payment channel adoption in developing countries including Indonesia, we see that Telcos can position themselves as the bridge between people living in rural areas and digital services offered by service providers. 
 
-Now, as we face the upcoming wave of 5G, it is a given that we are going to encounter a great number of new services or use cases of connectivity other than OTT. We strongly believe that with the ultimate payment gateway proposition, not only will Telcos escape from its vicious circle of unprofitability, they will also be able to easily **tap into the new 5G market** and **gain new revenue streams** by offering a direct payment method, as well as a centralised platform that sells an extensive range of connectivity-related services. 
+Now, as we face the upcoming wave of 5G, we should expect to encounter a variety of new services and use cases of connectivity other than OTT. With the ultimate payment gateway proposition, we believe Telcos can easily **tap into the new 5G market** and **gain new revenue streams** by establihing a centralised platform that sells an extensive range of connectivity-related services or smart devices, which will fulfil this 5G demand. 
 
 This way, revenue stream will be correlated with products and services sales. Hence, profitability will be ensured and expected to be more sustainable (considering the current demand and forecasted growing demand).
 
